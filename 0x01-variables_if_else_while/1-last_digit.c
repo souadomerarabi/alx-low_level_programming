@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point of the program
- * 
+ *
  * This function initializes a random number and checks the last digit of it.
  * it prints whether last digit is greater than 5, 0 or less than 6 and not 0.
  *
