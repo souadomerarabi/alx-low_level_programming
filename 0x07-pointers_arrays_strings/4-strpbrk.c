@@ -1,18 +1,29 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * main - check the code
+ * _strpbrk - prints the consecutive caracters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
  *
- * Return: Always 0.
+ * Return: new string.
  */
-int main(void)
+char *_strpbrk(char *s, char *accept)
 {
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
+	unsigned int i, j;
 
-    t = _strstr(s, f);
-    printf("%s\n", t);
-    return (0);
+	for (i = 0; *(s + i); i++)
+	{
+		for (j = 0; *(accept + j); j++)
+		{
+			if (*(s + i) == *(accept + j))
+			{
+				break;
+			}
+		}
+		if (*(accept + j) != '\0')
+		{
+			return (s + i);
+		}
+	}
+	return (0);
 }
