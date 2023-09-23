@@ -7,7 +7,7 @@
  * Return: new string.
  */
 char *_strstr(char *haystack, char *needle);
-{
+
 	while (*haystack)
 	{
 		if ((*haystack == *needle && coincidence(haystack, needle) == 1) || !*needle)
@@ -20,7 +20,6 @@ char *_strstr(char *haystack, char *needle);
 		}
 	}
 	return (0);
-}
 /**
  * coincidence - define if the string b is inside a.
  * @a: source string
